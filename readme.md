@@ -5,13 +5,29 @@ Generate d.ts from media files (.m4a or .png or etc.).
 ## Typescript
 
 ```typescript
-import generator from "dtsforwebpackgenerator";
-generator({ include: [], exclude: [], resolveDirPath: "./src" });
+import { source, include, exclude } from "./dtsgen.config.json";
+import generator, { DtsForWebpackGeneratorConfig } from "dtsforwebpackgenerator";
+
+const config: DtsForWebpackGeneratorConfig = {
+  include,
+  exclude,
+  resolveDir: source,
+};
+
+generator(config);
 ```
 
 ## Javascript / Node Commonjs
 
 ```typescript
 const generator = require("dtsforwebpackgenerator");
-generator({ include: [], exclude: [], resolveDirPath: "./src" });
+const { source, include, exclude } = require("./dtsgen.config.json");
+
+const config = {
+  include,
+  exclude,
+  resolveDir: source,
+};
+
+generator(config);
 ```

@@ -42,7 +42,7 @@ const getAllFiles = (config) => {
                 const fullName = file;
                 const ext = path_1.extname(fullName);
                 const name = path_1.basename(fullName, ext);
-                const path = path_1.join(__dirname, dirPath, "/", fullName);
+                const path = path_1.join(dirPath, "/", fullName);
                 _arrayOfFiles.push({
                     fullName,
                     name,
