@@ -1,10 +1,10 @@
 {
   "name": "dtsforwebpackgenerator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Generate d.ts from media files (.m4a or .png or etc.).",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/atomzamonday/dtsgenerator",
+  "repository": "https://github.com/atomzamonday/DtsForWebpackGenerator",
   "author": "atomzamonday",
   "license": "MIT",
   "scripts": {
