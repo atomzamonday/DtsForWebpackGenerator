@@ -1,6 +1,8 @@
 Generate d.ts from media files (.m4a or .png or etc.).
-#Usage:
-##Typescript
+
+# Usage:
+
+## Typescript
 
 ```jsx
 function HelloMessage({ name }) {
