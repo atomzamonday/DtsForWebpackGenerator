@@ -95,3 +95,4 @@ const main = async (config: DtsForWebpackGeneratorConfig) => {
 };
 
 export default main;
+export type { DtsForWebpackGeneratorConfig };

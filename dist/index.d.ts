@@ -5,3 +5,4 @@ declare type DtsForWebpackGeneratorConfig = {
 };
 declare const main: (config: DtsForWebpackGeneratorConfig) => Promise<void>;
 export default main;
+export type { DtsForWebpackGeneratorConfig };
