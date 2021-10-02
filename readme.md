@@ -9,5 +9,7 @@
 </div>
 <div>
   <code>import generator from "dtsforwebpackgenerator";</code>
+</div>
+<div>
   <code>import generator from "dtsforwebpackgenerator";</code>
 </div>
