@@ -4,10 +4,14 @@ Generate d.ts from media files (.m4a or .png or etc.).
 
 ## Typescript
 
-```jsx
-function HelloMessage({ name }) {
-  return <div>Hello {name}</div>;
-}
+```typescript
+import generator from "dtsforwebpackgenerator";
+generator({ include: [], exclude: [], resolveDirPath: "./src" });
+```
 
-ReactDOM.render(<HelloMessage name="Taylor" />, document.getElementById("container"));
+## Javascript / Node Commonjs
+
+```typescript
+const generator = require("dtsforwebpackgenerator");
+generator({ include: [], exclude: [], resolveDirPath: "./src" });
 ```
