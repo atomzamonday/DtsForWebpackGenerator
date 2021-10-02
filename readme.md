@@ -8,8 +8,18 @@
   <h2>Typescript</h2>
 </div>
 <div>
-  <code>import generator from "dtsforwebpackgenerator";</code>
-</div>
-<div>
-  <code>import generator from "dtsforwebpackgenerator";</code>
+```jsx
+function HelloMessage({ name }) {
+  return <div>Hello {name}</div>;
+}
+
+ReactDOM.render(
+<HelloMessage name="Taylor" />,
+document.getElementById('container')
+);
+
+```
+
+```
+
 </div>
