@@ -1,6 +1,6 @@
 {
   "name": "dtsforwebpackgenerator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Generate d.ts from media files (.m4a or .png or etc.).",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
