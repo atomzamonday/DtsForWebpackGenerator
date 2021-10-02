@@ -3,6 +3,6 @@ declare type DtsForWebpackGeneratorConfig = {
     exclude: string[];
     resolveDir: string;
 };
-declare const main: (config: DtsForWebpackGeneratorConfig) => Promise<void>;
-export default main;
+declare const DTSWebpackGenerator: (config: DtsForWebpackGeneratorConfig) => Promise<void>;
+export default DTSWebpackGenerator;
 export type { DtsForWebpackGeneratorConfig };

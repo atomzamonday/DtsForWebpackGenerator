@@ -7,8 +7,8 @@ const generateTypeFile = (file) => {
     const { path } = file;
     const typeD = `declare const media: string; export default media;`;
     const typeD_Path = path + dtsExt;
-    if (!fs_1.existsSync(typeD_Path)) {
-        fs_1.writeFileSync(typeD_Path, typeD);
+    if (!(0, fs_1.existsSync)(typeD_Path)) {
+        (0, fs_1.writeFileSync)(typeD_Path, typeD);
         return typeD_Path;
     }
     return false;
@@ -22,10 +22,10 @@ const filter = (config) => {
 };
 const getAllFiles = (config) => {
     const { include, exclude, dirPath, arrayOfFiles } = config;
-    const files = fs_1.readdirSync(dirPath);
+    const files = (0, fs_1.readdirSync)(dirPath);
     let _arrayOfFiles = arrayOfFiles || [];
     files.forEach((file) => {
-        if (fs_1.statSync(dirPath + "/" + file).isDirectory()) {
+        if ((0, fs_1.statSync)(dirPath + "/" + file).isDirectory()) {
             _arrayOfFiles = getAllFiles({
                 include,
                 exclude,
@@ -40,9 +40,9 @@ const getAllFiles = (config) => {
                 exclude,
             })) {
                 const fullName = file;
-                const ext = path_1.extname(fullName);
-                const name = path_1.basename(fullName, ext);
-                const path = path_1.join(dirPath, "/", fullName);
+                const ext = (0, path_1.extname)(fullName);
+                const name = (0, path_1.basename)(fullName, ext);
+                const path = (0, path_1.join)(dirPath, "/", fullName);
                 _arrayOfFiles.push({
                     fullName,
                     name,
@@ -55,7 +55,7 @@ const getAllFiles = (config) => {
     });
     return _arrayOfFiles;
 };
-const main = async (config) => {
+const DTSWebpackGenerator = async (config) => {
     const { include, exclude, resolveDir } = config;
     let generatedCount = 0;
     const fileList = getAllFiles({ include, exclude, dirPath: resolveDir });
@@ -68,4 +68,4 @@ const main = async (config) => {
     });
     console.log(`Generated type definition count: ${generatedCount}`);
 };
-exports.default = main;
+exports.default = DTSWebpackGenerator;

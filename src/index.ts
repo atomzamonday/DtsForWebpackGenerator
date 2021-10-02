@@ -80,7 +80,7 @@ const getAllFiles = (config: {
   return _arrayOfFiles;
 };
 
-const main = async (config: DtsForWebpackGeneratorConfig) => {
+const DTSWebpackGenerator = async (config: DtsForWebpackGeneratorConfig) => {
   const { include, exclude, resolveDir } = config;
   let generatedCount = 0;
   const fileList = getAllFiles({ include, exclude, dirPath: resolveDir });
@@ -94,5 +94,5 @@ const main = async (config: DtsForWebpackGeneratorConfig) => {
   console.log(`Generated type definition count: ${generatedCount}`);
 };
 
-export default main;
+export default DTSWebpackGenerator;
 export type { DtsForWebpackGeneratorConfig };
