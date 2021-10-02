@@ -1,6 +1,6 @@
 {
   "name": "dtsforwebpackgenerator",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Generate d.ts from media files (.m4a or .png or etc.).",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,9 @@
   "author": "atomzamonday",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "build:publish": "yarn run build; yarn publish"
   },
   "private": false,
   "dependencies": {
